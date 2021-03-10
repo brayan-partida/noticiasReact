@@ -12,7 +12,7 @@ function Formulario() {
       <div className={`styles.buscador row`}>
         <div className="col s12 m8 offset-m2">
           <form>
-            <h2 className={styles.heading}>Noticias por categoria</h2>
+            <h2 className={styles.heading}>Noticias por categoria de Mexico</h2>
 
             <div className="input-field col s6">
               <button
