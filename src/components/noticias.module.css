@@ -1,0 +1,15 @@
+
+.noticias_image{
+
+    border: solid 5px;
+    height: 400px;
+}
+
+.noticias_image:hover{
+    background-color: aqua;
+}
+
+.imagen_noticia{
+    height: 300px;
+}
+
