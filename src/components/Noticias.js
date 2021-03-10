@@ -14,7 +14,7 @@ const Noticias = ({ noticiasall }) => {
                 <div className={`card-image styles.noticias_image`}>
                   <img
                     src={noticia.urlToImage}
-                    className={styles.imagen_noticia}
+                    className={styles.imagen_noticia} 
                   />
                 </div>
                 <div className="card-content">
