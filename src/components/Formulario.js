@@ -4,7 +4,7 @@ import styles from "./formulario.module.css";
 import UseSelect from "../hooks/UseSelect";
 import useSelect from "../hooks/UseSelect";
 import axios from "axios";
-const inputext = styled.text``;
+
 
 function Formulario({guardarNoticias}) {
   const Opciones = [

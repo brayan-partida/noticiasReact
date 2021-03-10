@@ -11,7 +11,7 @@ const Noticias = ({ noticiasall }) => {
           <Fragment>
             <div className={`col s12 m6 l4 styles.noticias_image`}>
               <div className="card">
-                <div className={`card-image styles.noticias_image`}>
+                <div className={`card-image styles.noticias_image`} >
                   <img
                     src={noticia.urlToImage}
                     className={styles.imagen_noticia} 
@@ -22,7 +22,7 @@ const Noticias = ({ noticiasall }) => {
                   <p key={noticia.url}>{noticia.description}</p>
                 </div>
 
-                <div className="card-action">
+                <div key={noticia.url} className="card-action">
                   <a
                     className="waves-effect waves-light btn-small"
                     href={noticia.url}
