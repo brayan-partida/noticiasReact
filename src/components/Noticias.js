@@ -8,11 +8,28 @@ const Noticias = ({ noticiasall }) => {
     <Fragment>
       <div className="row">
         {noticiasall.map((noticia) => (
+          <div key={noticia.url} className={`card-image styles.noticias_image`}>
+            <img
+              key={noticia.url}
+              src={noticia.urlToImage}
+              className={styles.imagen_noticia}
+            />
+          </div>
+        ))}
+      </div>
+    </Fragment>
+  );
+};
+
+export default Noticias;
+/**<div className="row">
+        {noticiasall.map((noticia) => (
           <Fragment>
             <div className={`col s12 m6 l4 styles.noticias_image`}>
               <div className="card">
                 <div className={`card-image styles.noticias_image`} >
                   <img
+                  key={noticia.urlToImage}
                     src={noticia.urlToImage}
                     className={styles.imagen_noticia} 
                   />
@@ -34,9 +51,4 @@ const Noticias = ({ noticiasall }) => {
             </div>
           </Fragment>
         ))}
-      </div>
-    </Fragment>
-  );
-};
-
-export default Noticias;
+      </div> */
