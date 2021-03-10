@@ -18,7 +18,7 @@ function Formulario({guardarNoticias}) {
   ];
   //opciones---------------------------------------------->
   const [categoria, SelectNoticias] = useSelect("general", Opciones);
-  var [categoriaurl, guardarCategoriaurl] = useState("");
+  var [categoriaurl, guardarCategoriaurl] = useState("general");
   const buscar_noticias = (e) => {
     e.preventDefault();
 
