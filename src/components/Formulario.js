@@ -26,7 +26,7 @@ function Formulario({ guardarNoticias }) {
 
   useEffect(() => {
     const consumirApi = async () => {
-      var urlNews = `https://newsapi.org/v2/top-headlines?country=mx&category=${categoriaurl}&apiKey=3651958dc83541e5bc2b7dbca15bbaa0`;
+      var urlNews = `https://noticiasensenada.herokuapp.com/https://newsapi.org/v2/top-headlines?country=mx&category=${categoriaurl}&apiKey=3651958dc83541e5bc2b7dbca15bbaa0`;
       const connection = await axios.get(urlNews);
       console.log(connection.data.articles);
       guardarNoticias(connection.data.articles);
