@@ -27,11 +27,19 @@ function Formulario({ guardarNoticias }) {
   useEffect(() => {
     const consumirApi = async () => {
       var urlNews = `https://newsapi.org/v2/top-headlines?country=mx&category=${categoriaurl}&apiKey=3651958dc83541e5bc2b7dbca15bbaa0`;
-      const connection = await axios.get(urlNews, {
+      fetch(urlNews)
+        .then((response) => response.json())
+        .then(
+          (data) => guardarNoticias(data.articles)
+
+          // console.log(data.articles)
+        );
+
+      /*const connection = await axios.get(urlNews, {
         "Content-Type": "application/x-www-form-urlencoded",
-      }); //anable axios
-      console.log(connection.data.articles);
-      guardarNoticias(connection.data.articles);
+      }); //anable axios*/
+      //  console.log(connection.data.articles);
+      //
     };
     consumirApi();
   }, [categoriaurl]);
