@@ -27,13 +27,18 @@ function Formulario({ guardarNoticias }) {
   useEffect(() => {
     const consumirApi = async () => {
       var urlNews = `https://newsapi.org/v2/top-headlines?country=mx&category=${categoriaurl}&apiKey=3651958dc83541e5bc2b7dbca15bbaa0`;
-      fetch(urlNews)
+
+      const respuesta = await fetch(urlNews);
+      const resultado = await respuesta.json(respuesta);
+     guardarNoticias(resultado.articles);
+      console.log(resultado.articles);
+      /*fetch(urlNews)
         .then((response) => response.json())
         .then(
           (data) => guardarNoticias(data.articles)
 
           // console.log(data.articles)
-        );
+        );*/
 
       /*const connection = await axios.get(urlNews, {
         "Content-Type": "application/x-www-form-urlencoded",
